@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ebansse <ebansse@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 16:54:07 by ebansse           #+#    #+#             */
-/*   Updated: 2024/11/07 17:03:06 by ebansse          ###   ########.fr       */
+/*   Created: 2024/11/07 15:40:18 by ebansse           #+#    #+#             */
+/*   Updated: 2024/11/07 16:56:24 by ebansse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int str)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	if ((str >= 0 && str <= 126))
-		return (1);
-	return (0);	
+	int	i;
+	int	j;
+	unsigned	int	start;
+	int	end;
+	size_t	len;
+	char	*res;
+
+	i = 0;
+	j = ft_strlen((char *)s1) - 1;
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	start = i;
+	while (s1[j] && ft_strchr(set, s1[j]))
+		j--;
+	end = j;
+	len = end - start + 1;
+	res = ft_substr(s1, start, len);
+	return (res);	
 }

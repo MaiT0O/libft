@@ -6,7 +6,7 @@
 /*   By: ebansse <ebansse@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:52:49 by ebansse           #+#    #+#             */
-/*   Updated: 2024/11/07 12:26:59 by ebansse          ###   ########.fr       */
+/*   Updated: 2024/11/07 15:53:23 by ebansse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ char	*ft_strchr(const char *string, int searchedChar)
 	while (string[++i])
 	{
 		if (string[i] == c)
-			return ((char	*)(string + 1));
-	}   
+			return ((char	*)(string + i));
+	}
+	if (string[i] == c)
+		return ((char	*)(string + i));
 	return (NULL);
 }
