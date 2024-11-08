@@ -6,19 +6,20 @@
 /*   By: ebansse <ebansse@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 15:23:45 by ebansse           #+#    #+#             */
-/*   Updated: 2024/11/07 15:34:44 by ebansse          ###   ########.fr       */
+/*   Updated: 2024/11/08 14:44:49 by ebansse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *new_str;
-	int	i;
-	int j;
+	char	*new_str;
+	int		i;
+	int		j;
 
-	new_str = (char *)malloc(sizeof(char) * (ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1));
+	new_str = (char *)malloc(sizeof(char)
+			* (ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1));
 	i = -1;
 	j = 0;
 	if (!new_str || !s1 || !s2)

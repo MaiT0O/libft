@@ -6,13 +6,13 @@
 /*   By: ebansse <ebansse@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 16:25:24 by ebansse           #+#    #+#             */
-/*   Updated: 2024/11/07 14:34:59 by ebansse          ###   ########.fr       */
+/*   Updated: 2024/11/08 14:20:15 by ebansse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char str)
+int	ft_isalpha(int str)
 {
 	if ((str >= 'a' && str <= 'z') || (str >= 'A' && str <= 'Z'))
 		return (1);

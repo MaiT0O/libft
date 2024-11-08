@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
-	char *ptr;
+	int		i;
+	char	*ptr;
 
 	i = 0;
 	ptr = 0;
